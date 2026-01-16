@@ -2,6 +2,32 @@
 #!desc=make them to 0.0.0.0
 
 [Host]
+# --- Added from Image (New) ---
+*-netson-ipad-ds.assoc-xy.zbedn.net = 0.0.0.0
+ads.feedly.com = 0.0.0.0
+api.popin.cc = 0.0.0.0
+appsgrowthpromo-pa.googleapis.com = 0.0.0.0
+assetconfig.edo.org = 0.0.0.0
+beyondwickedmapping.org = 0.0.0.0
+cdn.amplitude.com = 0.0.0.0
+cdn.intelimier.co = 0.0.0.0
+control-out.mta.qq.com = 0.0.0.0
+experiments.apple.com = 0.0.0.0
+featureassets.org = 0.0.0.0
+intake-analytics.wikimedia.org = 0.0.0.0
+m.vpon.com = 0.0.0.0
+mp-eu1.mcdonalds.com = 0.0.0.0
+notify.bugsnag.com = 0.0.0.0
+o33249.ingest.us.sentry.io = 0.0.0.0
+ogads-pa.googleapis.com = 0.0.0.0
+play.google.com = 0.0.0.0
+prodregistry2.org = 0.0.0.0
+s-cdn.anthropic.com = 0.0.0.0
+ssl.google-analytics.com = 0.0.0.0
+static.anthropic.com = 0.0.0.0
+valmart.secure.dyn.rktcdn.net = 0.0.0.0
+
+# --- Original List (Preserved & Deduplicated) ---
 a.line.me = 0.0.0.0
 a.nel.cloudflare.com = 0.0.0.0
 a.pub.network = 0.0.0.0
