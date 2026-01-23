@@ -1,0 +1,42 @@
+#!name=LINE VOOM 阻擋器 - 優化版
+#!desc=移除 LINE VOOM 功能，減少不必要的網路請求和數據使用
+
+[Rule]
+# ==========================================
+# 影片與媒體內容阻擋 (REJECT-TINYGIF)
+# ==========================================
+# VOOM 影片和媒體內容
+URL-REGEX,^https:\/\/voom-obs\.line-scdn\.net\/.*,REJECT-TINYGIF
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r\/.*\/sfv\/.*\/mp4,REJECT-TINYGIF
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r\/myhome\/.*,REJECT-TINYGIF
+URL-REGEX,^https:\/\/ad\.line-scdn\.net\/.*\.mp4,REJECT-TINYGIF
+
+# ==========================================
+# API 請求阻擋 (REJECT)
+# ==========================================
+# 動態時間軸狀態
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/.*\/timeline\/tab\/status\.json,REJECT
+
+# VOOM 相關 API
+URL-REGEX,^https:\/\/legy\.line-apps\.com\/ext\/videohub\/.*\/api\/.*,REJECT
+
+# VOOM 故事功能
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/st\/api\/.*\/story\/recentstory\/.*,REJECT
+
+# 推薦內容
+URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/tl\/discover\/api\/.*\/recommendTab\/feeds,REJECT
+
+# 商店相關
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r\/shop\/.*,REJECT
+
+# 資源包和檔案下載
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r\/myhome\/.*\.(zip|0)$,REJECT
+URL-REGEX,^https:\/\/obs\.line-scdn\.net\/r\/.*\/0$,REJECT
+
+# ==========================================
+# 數據收集阻擋 (REJECT-DROP)
+# ==========================================
+URL-REGEX,^https:\/\/nelo2-col\.linecorp\.com,REJECT-DROP
+
+[MITM]
+hostname = %APPEND% gw.line.naver.jp, obs.line-scdn.net, voom-obs.line-scdn.net, ad.line-scdn.net, legy.line-apps.com, nelo2-col.linecorp.com
